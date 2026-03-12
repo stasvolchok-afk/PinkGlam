@@ -1,139 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PinkGlam | Blog de Belleza & Estilo</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, .brand-font { font-family: 'Playfair Display', serif; }
-        .pink-gradient { background: linear-gradient(90deg, #FDF2F8 0%, #FCE7F3 100%); }
+<head>    
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Grupo Afina | Blog de Belleza & Estilo</title>    
+    <script src="https://cdn.tailwindcss.com"></script>    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">    
+    <style>        
+        body { font-family: 'Inter', sans-serif; }        
+        h1, h2, h3, .brand-font { font-family: 'Playfair Display', serif; }        
+        .pink-gradient { background: linear-gradient(90deg, #FDF2F8 0%, #FCE7F3 100%); }    
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
-
-    <nav class="w-full py-6 px-8 flex justify-between items-center border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur z-50">
-        <div class="text-2xl font-bold brand-font tracking-wide text-pink-600">PinkGlam.</div>
-        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-gray-500">
-            <a href="#" class="hover:text-pink-500 transition">Skincare</a>
-            <a href="#" class="hover:text-pink-500 transition">Maquillaje</a>
-            <a href="#" class="hover:text-pink-500 transition">Cabello</a>
-            <a href="#" class="hover:text-pink-500 transition">Reseñas</a>
-        </div>
-        <button class="bg-black text-white px-5 py-2 rounded-full text-sm hover:bg-pink-600 transition">Suscribirse</button>
+    <nav class="w-full py-6 px-8 flex justify-between items-center border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur z-50">        
+        <div class="text-2xl font-bold brand-font tracking-wide text-pink-600">Grupo Afina.</div>        
+        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-gray-500">            
+            <a href="#" class="hover:text-pink-500 transition">Skincare</a>            
+            <a href="#" class="hover:text-pink-500 transition">Maquillaje</a>            
+            <a href="#" class="hover:text-pink-500 transition">Cabello</a>            
+            <a href="#" class="hover:text-pink-500 transition">Reseñas</a>        
+        </div>        
+        <button class="bg-black text-white px-5 py-2 rounded-full text-sm hover:bg-pink-600 transition">Suscribirse</button>    
     </nav>
-
-    <header class="pink-gradient py-20 md:py-32 text-center px-4">
-        <span class="text-pink-600 font-bold tracking-widest text-xs uppercase mb-4 block">Bienvenida a tu nuevo espacio</span>
-        <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">Belleza inteligente <br> para la mujer real.</h1>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Dejamos de lado el hype para enfocarnos en lo que funciona. Tutoriales, análisis de ingredientes y las últimas tendencias explicadas.
-        </p>
-        <div class="flex justify-center gap-4">
-            <a href="#latest" class="bg-gray-900 text-white px-8 py-3 rounded-md font-medium hover:bg-gray-800 transition shadow-lg">Leer Artículos</a>
-            <a href="#newsletter" class="bg-white text-gray-900 border border-gray-200 px-8 py-3 rounded-md font-medium hover:bg-gray-50 transition">Guía Gratis</a>
-        </div>
+    
+    <header class="pink-gradient py-20 md:py-32 text-center px-4">        
+        <span class="text-pink-600 font-bold tracking-widest text-xs uppercase mb-4 block">Bienvenida a tu nuevo espacio</span>        
+        <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">Belleza inteligente <br> para la mujer real.</h1>        
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">            Dejamos de lado el hype para enfocarnos en lo que funciona. Tutoriales, análisis de ingredientes y las últimas tendencias explicadas.        </p>        
+        <div class="flex justify-center gap-4">            
+            <a href="#latest" class="bg-gray-900 text-white px-8 py-3 rounded-md font-medium hover:bg-gray-800 transition shadow-lg">Leer Artículos</a>            
+            <a href="#newsletter" class="bg-white text-gray-900 border border-gray-200 px-8 py-3 rounded-md font-medium hover:bg-gray-50 transition">Guía Gratis</a>        
+        </div>    
     </header>
+    
+    <section class="py-16 px-6 max-w-6xl mx-auto">        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">            
+            <div class="p-6 border border-gray-100 hover:shadow-xl transition duration-300 rounded-lg">                
+                <div class="text-4xl mb-4">✨</div>                
+                <h3 class="text-xl font-bold mb-2">Skincare Science</h3>                
+                <p class="text-gray-500 text-sm">Entendemos los ingredientes antes de recomendarlos. Retinol, Vitamina C y más.</p>            
+            </div>            
+            <div class="p-6 border border-gray-100 hover:shadow-xl transition duration-300 rounded-lg">                
+                <div class="text-4xl mb-4">💄</div>                
+                <h3 class="text-xl font-bold mb-2">Makeup Artistry</h3>                
+                <p class="text-gray-500 text-sm">Desde el 'no-makeup makeup' hasta looks de noche impactantes.</p>            
+            </div>            
+            <div class="p-6 border border-gray-100 hover:shadow-xl transition duration-300 rounded-lg">                
+                <div class="text-4xl mb-4">🌿</div>                
+                <h3 class="text-xl font-bold mb-2">Clean Beauty</h3>                
+                <p class="text-gray-500 text-sm">Opciones sostenibles, cruelty-free y amigables con el planeta.</p>            
+            </div>        
+        </div>    
+    </section>
+    
+    <section id="latest" class="bg-gray-50 py-20 px-6">        
+        <div class="max-w-6xl mx-auto">            
+            <div class="flex justify-between items-end mb-12">                
+                <h2 class="text-3xl md:text-4xl font-bold">Últimas Publicaciones</h2>                
+                <a href="#" class="text-pink-600 font-medium hover:underline">Ver todo el blog →</a>            
+            </div>                        
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">                
+                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group">                    
+                    <div class="h-48 bg-gray-300 w-full relative">                        
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdd403348?auto=format&fit=crop&q=80&w=800" alt="Makeup" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">                    
+                    </div>                    
+                    <div class="p-6">                        
+                        <span class="text-xs font-bold text-pink-500 uppercase">Reseña</span>                        
+                        <h3 class="text-xl font-bold mt-2 mb-3 leading-snug">Los 5 labiales nude que favorecen a todo tipo de piel</h3>                        
+                        <p class="text-gray-500 text-sm mb-4">Probamos más de 50 labiales y estos son los definitivos para tu neceser.</p>                        
+                        <a href="#" class="text-sm font-bold border-b border-black pb-0.5">Leer más</a>                    
+                    </div>                
+                </article>
+                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group">                    
+                    <div class="h-48 bg-gray-300 w-full relative">                         
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800" alt="Skincare" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">                    
+                    </div>                    
+                    <div class="p-6">                        
+                        <span class="text-xs font-bold text-pink-500 uppercase">Skincare</span>                        
+                        <h3 class="text-xl font-bold mt-2 mb-3 leading-snug">Rutina de noche: El orden correcto de tus productos</h3>                        
+                        <p class="text-gray-500 text-sm mb-4">¿El aceite va antes o después de la crema? Aclaramos tus dudas.</p>                        
+                        <a href="#" class="text-sm font-bold border-b border-black pb-0.5">Leer más</a>                    
+                    </div>                
+                </article>
+                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group">                    
+                    <div class="h-48 bg-gray-300 w-full relative">                         
+                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800" alt="Hair" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">                    
+                    </div>                    
+                    <div class="p-6">                        
+                        <span class="text-xs font-bold text-pink-500 uppercase">Cabello</span>                        
+                        <h3 class="text-xl font-bold mt-2 mb-3 leading-snug">Cómo recuperar el brillo del cabello en invierno</h3>                        
+                        <p class="text-gray-500 text-sm mb-4">Mascarillas caseras y productos profesionales para combatir el frizz.</p>                        
+                        <a href="#" class="text-sm font-bold border-b border-black pb-0.5">Leer más</a>                    
+                    </div>                
+                </article>            
+            </div>        
+        </div>    
+    </section>
+    
+    <section id="newsletter" class="py-20 px-6 bg-pink-900 text-white text-center">        
+        <div class="max-w-2xl mx-auto">            
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Únete al Club Grupo Afina</h2>            
+            <p class="text-pink-100 text-lg mb-8">Recibe semanalmente los mejores tips de belleza y obtén gratis nuestra <strong>"Guía de Básicos de Skincare"</strong>.</p>            
+            <form class="flex flex-col md:flex-row gap-4 justify-center">                
+                <input type="email" placeholder="Tu correo electrónico" class="px-6 py-4 rounded-md text-gray-900 w-full md:w-80 focus:outline-none focus:ring-2 focus:ring-pink-400">                
+                <button type="submit" class="bg-pink-500 px-8 py-4 rounded-md font-bold hover:bg-pink-400 transition shadow-lg">Quiero la Guía</button>            
+            </form>            
+            <p class="text-xs text-pink-300 mt-4">Sin spam. Solo belleza real.</p>        
+        </div>    
+    </section>
 
-    <section class="py-16 px-6 max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div class="p-6 border border-gray-100 hover:shadow-xl transition duration-300 rounded-lg">
-                <div class="text-4xl mb-4">✨</div>
-                <h3 class="text-xl font-bold mb-2">Skincare Science</h3>
-                <p class="text-gray-500 text-sm">Entendemos los ingredientes antes de recomendarlos. Retinol, Vitamina C y más.</p>
-            </div>
-            <div class="p-6 border border-gray-100 hover:shadow-xl transition duration-300 rounded-lg">
-                <div class="text-4xl mb-4">💄</div>
-                <h3 class="text-xl font-bold mb-2">Makeup Artistry</h3>
-                <p class="text-gray-500 text-sm">Desde el 'no-makeup makeup' hasta looks de noche impactantes.</p>
-            </div>
-            <div class="p-6 border border-gray-100 hover:shadow-xl transition duration-300 rounded-lg">
-                <div class="text-4xl mb-4">🌿</div>
-                <h3 class="text-xl font-bold mb-2">Clean Beauty</h3>
-                <p class="text-gray-500 text-sm">Opciones sostenibles, cruelty-free y amigables con el planeta.</p>
+    <section id="contacto" class="py-16 px-6 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Contacto</h2>
+            <div class="bg-gray-50 p-8 rounded-lg border border-gray-100 shadow-sm inline-block text-left">
+                <p class="font-bold text-gray-900 text-lg mb-2">NOAR MAELIS GUAL ZIER</p>
+                <p class="text-gray-600 mb-4">
+                    <a href="mailto:stasvolchok@gmail.com" class="hover:text-pink-600 transition">stasvolchok@gmail.com</a>
+                </p>
+                <p class="font-bold text-gray-900 mb-1">Dirección:</p>
+                <p class="text-gray-600">Dg. 49 Sur #53B - 58</p>
+                <p class="text-gray-600">Bogotá, 110611</p>
+                <p class="text-gray-600">Colombia</p>
             </div>
         </div>
     </section>
 
-    <section id="latest" class="bg-gray-50 py-20 px-6">
-        <div class="max-w-6xl mx-auto">
-            <div class="flex justify-between items-end mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold">Últimas Publicaciones</h2>
-                <a href="#" class="text-pink-600 font-medium hover:underline">Ver todo el blog →</a>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group">
-                    <div class="h-48 bg-gray-300 w-full relative">
-                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdd403348?auto=format&fit=crop&q=80&w=800" alt="Makeup" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-pink-500 uppercase">Reseña</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3 leading-snug">Los 5 labiales nude que favorecen a todo tipo de piel</h3>
-                        <p class="text-gray-500 text-sm mb-4">Probamos más de 50 labiales y estos son los definitivos para tu neceser.</p>
-                        <a href="#" class="text-sm font-bold border-b border-black pb-0.5">Leer más</a>
-                    </div>
-                </article>
-
-                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group">
-                    <div class="h-48 bg-gray-300 w-full relative">
-                         <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800" alt="Skincare" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-pink-500 uppercase">Skincare</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3 leading-snug">Rutina de noche: El orden correcto de tus productos</h3>
-                        <p class="text-gray-500 text-sm mb-4">¿El aceite va antes o después de la crema? Aclaramos tus dudas.</p>
-                        <a href="#" class="text-sm font-bold border-b border-black pb-0.5">Leer más</a>
-                    </div>
-                </article>
-
-                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group">
-                    <div class="h-48 bg-gray-300 w-full relative">
-                         <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800" alt="Hair" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-pink-500 uppercase">Cabello</span>
-                        <h3 class="text-xl font-bold mt-2 mb-3 leading-snug">Cómo recuperar el brillo del cabello en invierno</h3>
-                        <p class="text-gray-500 text-sm mb-4">Mascarillas caseras y productos profesionales para combatir el frizz.</p>
-                        <a href="#" class="text-sm font-bold border-b border-black pb-0.5">Leer más</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="newsletter" class="py-20 px-6 bg-pink-900 text-white text-center">
-        <div class="max-w-2xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">Únete al Club PinkGlam</h2>
-            <p class="text-pink-100 text-lg mb-8">Recibe semanalmente los mejores tips de belleza y obtén gratis nuestra <strong>"Guía de Básicos de Skincare"</strong>.</p>
-            <form class="flex flex-col md:flex-row gap-4 justify-center">
-                <input type="email" placeholder="Tu correo electrónico" class="px-6 py-4 rounded-md text-gray-900 w-full md:w-80 focus:outline-none focus:ring-2 focus:ring-pink-400">
-                <button type="submit" class="bg-pink-500 px-8 py-4 rounded-md font-bold hover:bg-pink-400 transition shadow-lg">Quiero la Guía</button>
-            </form>
-            <p class="text-xs text-pink-300 mt-4">Sin spam. Solo belleza real.</p>
-        </div>
-    </section>
-
-    <footer class="bg-gray-900 text-gray-400 py-12 px-6">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <div class="text-2xl font-bold brand-font text-white mb-4 md:mb-0">PinkGlam.</div>
-            <div class="flex space-x-6 text-sm">
-                <a href="#" class="hover:text-white transition">Sobre Mí</a>
-                <a href="#" class="hover:text-white transition">Contacto</a>
-                <a href="#" class="hover:text-white transition">Política de Privacidad</a>
-            </div>
-            <div class="mt-4 md:mt-0 flex space-x-4">
-                <div class="w-5 h-5 bg-gray-600 rounded-full hover:bg-white cursor-pointer transition"></div>
-                <div class="w-5 h-5 bg-gray-600 rounded-full hover:bg-white cursor-pointer transition"></div>
-                <div class="w-5 h-5 bg-gray-600 rounded-full hover:bg-white cursor-pointer transition"></div>
-            </div>
-        </div>
-        <div class="text-center text-xs mt-8 border-t border-gray-800 pt-8">
-            &copy; 2024 PinkGlam Beauty Blog. Todos los derechos reservados.
-        </div>
+    <footer class="bg-gray-900 text-gray-400 py-12 px-6">        
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">            
+            <div class="mb-4 md:mb-0">
+                <div class="text-2xl font-bold brand-font text-white mb-4">Grupo Afina.</div>
+                <div class="text-sm space-y-1">
+                    <p class="font-bold text-gray-300">NOAR MAELIS GUAL ZIER</p>
+                    <p>stasvolchok@gmail.com</p>
+                    <p>Dg. 49 Sur #53B - 58, Bogotá, 110611, Colombia</p>
+                </div>
+            </div>            
+            <div class="flex flex-col sm:flex-row sm:space-x-6 space-y-3 sm:space-y-0 text-sm">                
+                <a href="#contacto" class="hover:text-white transition">Contacto</a>                
+                <a href="#" class="hover:text-white transition">Términos y Condiciones</a>
+                <a href="#" class="hover:text-white transition">Política de Privacidad</a>            
+            </div>            
+            <div class="flex space-x-4">                
+                <div class="w-5 h-5 bg-gray-600 rounded-full hover:bg-white cursor-pointer transition"></div>                
+                <div class="w-5 h-5 bg-gray-600 rounded-full hover:bg-white cursor-pointer transition"></div>                
+                <div class="w-5 h-5 bg-gray-600 rounded-full hover:bg-white cursor-pointer transition"></div>            
+            </div>        
+        </div>        
+        <div class="text-center text-xs mt-8 border-t border-gray-800 pt-8">            
+            &copy; 2024 Grupo Afina. Todos los derechos reservados.        
+        </div>    
     </footer>
-
 </body>
 </html>
