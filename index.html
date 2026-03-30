@@ -1,155 +1,178 @@
+<?php
+// Variables de configuración corporativa y legal
+$nombre_anunciante = "NOAR MAELIS GUAL ZIER";
+$correo_contacto = "stasvolchok@gmail.com";
+$celular_contacto = "+57 3165652252";
+$direccion_contacto = "Dg. 49 Sur #53B - 58, BOGOTA, Colombia";
+$anio_actual = date("Y");
+?>
 <!DOCTYPE html>
 <html lang="es">
-<head>    
-    <meta charset="UTF-8">    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Plantafina | Blog de Belleza & Estilo</title>    
-    <script src="https://cdn.tailwindcss.com"></script>    
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">    
-    <style>        
-        body { font-family: 'Inter', sans-serif; }        
-        h1, h2, h3, .brand-font { font-family: 'Playfair Display', serif; }        
-        .pink-gradient { background: linear-gradient(90deg, #FDF2F8 0%, #FCE7F3 100%); }    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= htmlspecialchars($nombre_anunciante) ?> | Guía de Belleza Inteligente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4a4a4a; /* Gris Carbón / Ciencia */
+            --secondary: #d4a373; /* Nude / Piel */
+            --dark: #2d3748;
+            --light: #faf5f0; /* Fondo crema muy suave */
+            --text: #334155;
+            --accent: #b08968; 
+        }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); margin: 0; background-color: #ffffff; }
+        header { background-color: #ffffff; padding: 20px 5%; box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; flex-wrap: wrap; }
+        .logo { font-size: 16px; font-weight: 700; color: var(--primary); text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; }
+        nav { margin-top: 10px; }
+        nav a { margin-left: 20px; text-decoration: none; color: var(--dark); font-weight: 600; font-size: 14px; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary); }
+        .hero { background: linear-gradient(135deg, #f5ebe0 0%, #e3d5ca 100%); padding: 80px 5%; text-align: center; border-bottom: 1px solid #d5bdaf; }
+        .hero h1 { color: var(--dark); font-size: 42px; margin-bottom: 20px; font-weight: 700; }
+        .hero p { font-size: 18px; max-width: 800px; margin: 0 auto 30px; color: #4a4a4a; }
+        .badge { background-color: var(--primary); color: white; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; display: inline-block; margin-bottom: 20px; }
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 5%; }
+        .section-title { font-size: 32px; color: var(--dark); text-align: center; margin-bottom: 50px; position: relative; }
+        .section-title::after { content: ''; width: 60px; height: 4px; background-color: var(--accent); display: block; margin: 15px auto 0; border-radius: 2px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 5px solid var(--secondary); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--dark); margin-top: 0; font-size: 20px; }
+        .info-panel { background-color: var(--light); border-radius: 12px; padding: 40px; margin-bottom: 60px; border-left: 6px solid var(--secondary); }
+        .info-panel h3 { color: var(--dark); margin-top: 0; }
+        .about-section { background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 60px; border: 1px solid #e3d5ca; }
+        
+        table { width: 100%; border-collapse: collapse; margin-bottom: 40px; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden; }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #e3d5ca; }
+        th { background-color: var(--primary); color: white; font-weight: 600; }
+        tr:hover { background-color: #faf5f0; }
+        
+        footer { background-color: var(--dark); color: #cbd5e1; padding: 60px 5% 20px; font-size: 14px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; border-bottom: 1px solid #334155; padding-bottom: 40px; }
+        .footer-grid h4 { color: white; margin-top: 0; font-size: 18px; }
+        .footer-links a { color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 12px; transition: color 0.3s;}
+        .footer-links a:hover { color: white; }
+        .copyright { text-align: center; margin-top: 20px; }
     </style>
 </head>
-<body class="bg-white text-gray-800 antialiased">
-    <nav class="w-full py-6 px-8 flex justify-between items-center border-b border-gray-100 sticky top-0 bg-white/95 backdrop-blur z-50">        
-        <div class="text-2xl font-bold brand-font tracking-wide text-pink-600">Plantafina.</div>        
-        <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-gray-500">            
-            <a href="#" class="hover:text-pink-500 transition">Skincare</a>            
-            <a href="#" class="hover:text-pink-500 transition">Maquillaje</a>            
-            <a href="#" class="hover:text-pink-500 transition">Cabello</a>            
-            <a href="#" class="hover:text-pink-500 transition">Reseñas</a>        
-        </div>        
-        <button class="bg-black text-white px-5 py-2 rounded-full text-sm hover:bg-pink-600 transition">Suscribirse</button>    
-    </nav>
-    
-    <header class="pink-gradient py-20 md:py-32 text-center px-4">        
-        <span class="text-pink-600 font-bold tracking-widest text-xs uppercase mb-4 block">Bienvenida a tu nuevo espacio</span>        
-        <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">Belleza inteligente <br> para la mujer real.</h1>        
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">            Dejamos de lado el hype para enfocarnos en lo que funciona. Tutoriales, análisis de ingredientes y las últimas tendencias explicadas.        </p>        
-        <div class="flex justify-center gap-4">            
-            <a href="#latest" class="bg-gray-900 text-white px-8 py-3 rounded-md font-medium hover:bg-gray-800 transition shadow-lg">Leer Artículos</a>            
-            <a href="#newsletter" class="bg-white text-gray-900 border border-gray-200 px-8 py-3 rounded-md font-medium hover:bg-gray-50 transition">Guía Gratis</a>        
-        </div>    
+<body>
+
+    <header>
+        <a href="index.php" class="logo"><?= htmlspecialchars($nombre_anunciante) ?></a>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#ingredientes">Ciencia de Ingredientes</a>
+            <a href="#tutoriales">Rutina Correcta</a>
+            <a href="#mitos">Hype vs. Realidad</a>
+            <a href="#sobre-mi">Sobre Mí</a>
+        </nav>
     </header>
-    
-    <section class="py-16 px-6 max-w-6xl mx-auto">        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">            
-            <div class="p-6 border border-gray-100 hover:shadow-xl transition duration-300 rounded-lg">                
-                <div class="text-4xl mb-4">✨</div>                
-                <h3 class="text-xl font-bold mb-2">Skincare Science</h3>                
-                <p class="text-gray-500 text-sm">Entendemos los ingredientes antes de recomendarlos. Retinol, Vitamina C y más.</p>            
-            </div>            
-            <div class="p-6 border border-gray-100 hover:shadow-xl transition duration-300 rounded-lg">                
-                <div class="text-4xl mb-4">💄</div>                
-                <h3 class="text-xl font-bold mb-2">Makeup Artistry</h3>                
-                <p class="text-gray-500 text-sm">Desde el 'no-makeup makeup' hasta looks de noche impactantes.</p>            
-            </div>            
-            <div class="p-6 border border-gray-100 hover:shadow-xl transition duration-300 rounded-lg">                
-                <div class="text-4xl mb-4">🌿</div>                
-                <h3 class="text-xl font-bold mb-2">Clean Beauty</h3>                
-                <p class="text-gray-500 text-sm">Opciones sostenibles, cruelty-free y amigables con el planeta.</p>            
-            </div>        
-        </div>    
-    </section>
-    
-    <section id="latest" class="bg-gray-50 py-20 px-6">        
-        <div class="max-w-6xl mx-auto">            
-            <div class="flex justify-between items-end mb-12">                
-                <h2 class="text-3xl md:text-4xl font-bold">Últimas Publicaciones</h2>                
-                <a href="#" class="text-pink-600 font-medium hover:underline">Ver todo el blog →</a>            
-            </div>                        
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">                
-                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group">                    
-                    <div class="h-48 bg-gray-300 w-full relative">                        
-                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdd403348?auto=format&fit=crop&q=80&w=800" alt="Makeup" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">                    
-                    </div>                    
-                    <div class="p-6">                        
-                        <span class="text-xs font-bold text-pink-500 uppercase">Reseña</span>                        
-                        <h3 class="text-xl font-bold mt-2 mb-3 leading-snug">Los 5 labiales nude que favorecen a todo tipo de piel</h3>                        
-                        <p class="text-gray-500 text-sm mb-4">Probamos más de 50 labiales y estos son los definitivos para tu neceser.</p>                        
-                        <a href="#" class="text-sm font-bold border-b border-black pb-0.5">Leer más</a>                    
-                    </div>                
-                </article>
-                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group">                    
-                    <div class="h-48 bg-gray-300 w-full relative">                         
-                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&q=80&w=800" alt="Skincare" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">                    
-                    </div>                    
-                    <div class="p-6">                        
-                        <span class="text-xs font-bold text-pink-500 uppercase">Skincare</span>                        
-                        <h3 class="text-xl font-bold mt-2 mb-3 leading-snug">Rutina de noche: El orden correcto de tus productos</h3>                        
-                        <p class="text-gray-500 text-sm mb-4">¿El aceite va antes o después de la crema? Aclaramos tus dudas.</p>                        
-                        <a href="#" class="text-sm font-bold border-b border-black pb-0.5">Leer más</a>                    
-                    </div>                
-                </article>
-                <article class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition group">                    
-                    <div class="h-48 bg-gray-300 w-full relative">                         
-                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800" alt="Hair" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">                    
-                    </div>                    
-                    <div class="p-6">                        
-                        <span class="text-xs font-bold text-pink-500 uppercase">Cabello</span>                        
-                        <h3 class="text-xl font-bold mt-2 mb-3 leading-snug">Cómo recuperar el brillo del cabello en invierno</h3>                        
-                        <p class="text-gray-500 text-sm mb-4">Mascarillas caseras y productos profesionales para combatir el frizz.</p>                        
-                        <a href="#" class="text-sm font-bold border-b border-black pb-0.5">Leer más</a>                    
-                    </div>                
-                </article>            
-            </div>        
-        </div>    
-    </section>
-    
-    <section id="newsletter" class="py-20 px-6 bg-pink-900 text-white text-center">        
-        <div class="max-w-2xl mx-auto">            
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">Únete al Club Plantafina</h2>            
-            <p class="text-pink-100 text-lg mb-8">Recibe semanalmente los mejores tips de belleza y obtén gratis nuestra <strong>"Guía de Básicos de Skincare"</strong>.</p>            
-            <form class="flex flex-col md:flex-row gap-4 justify-center">                
-                <input type="email" placeholder="Tu correo electrónico" class="px-6 py-4 rounded-md text-gray-900 w-full md:w-80 focus:outline-none focus:ring-2 focus:ring-pink-400">                
-                <button type="submit" class="bg-pink-500 px-8 py-4 rounded-md font-bold hover:bg-pink-400 transition shadow-lg">Quiero la Guía</button>            
-            </form>            
-            <p class="text-xs text-pink-300 mt-4">Sin spam. Solo belleza real.</p>        
-        </div>    
+
+    <section id="inicio" class="hero">
+        <span class="badge">Blog Educativo de Cosmetología - Sin Fines Comerciales</span>
+        <h1>Belleza Inteligente para la Mujer Real</h1>
+        <p>Dejamos de lado el hype del marketing para enfocarnos estrictamente en lo que funciona. Análisis de ingredientes basados en evidencia, tutoriales de aplicación y la desmitificación de las últimas tendencias del cuidado de la piel.</p>
     </section>
 
-    <section id="contacto" class="py-16 px-6 bg-white border-t border-gray-100">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">Contacto</h2>
-            <div class="bg-gray-50 p-8 rounded-lg border border-gray-100 shadow-sm inline-block text-left">
-                <p class="font-bold text-gray-900 text-lg mb-2">NOAR MAELIS GUAL ZIER</p>
-                <p class="text-gray-600 mb-4">
-                    <a href="mailto:stasvolchok@gmail.com" class="hover:text-pink-600 transition">stasvolchok@gmail.com</a>
-                </p>
-                <p class="font-bold text-gray-900 mb-1">Dirección:</p>
-                <p class="text-gray-600">Dg. 49 Sur #53B - 58</p>
-                <p class="text-gray-600">Bogotá, 110611</p>
-                <p class="text-gray-600">Colombia</p>
+    <div class="container">
+        
+        <div id="sobre-mi" class="about-section">
+            <h2>Propósito Académico y Formativo del Sitio</h2>
+            <p>Este portal es una iniciativa estrictamente educativa, académica e informativa operada de manera personal e independiente por <strong><?= htmlspecialchars($nombre_anunciante) ?></strong>. Mi propósito exclusivo es la divulgación de conocimientos teóricos sobre el cuidado personal, la higiene y la química cosmética básica.</p>
+            <p><strong>Declaro de manera oficial y transparente que este sitio NO tiene fines comerciales. NO opero una clínica estética, NO soy dermatóloga, NO vendo cremas, sueros ni maquillaje, y NO ofrezco consultas médicas ni recetas.</strong> Toda la información analítica sobre ingredientes se proporciona de forma libre, gratuita y orientativa como material de estudio.</p>
+        </div>
+
+        <h2 id="ingredientes" class="section-title">Análisis Teórico de Ingredientes Activos</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Ácido Hialurónico (AH)</h3>
+                <p>Químicamente, es un glicosaminoglicano. Su función principal no es "hidratar" por sí solo, sino actuar como una esponja molecular: puede retener hasta 1000 veces su peso en agua. <strong>El secreto analítico:</strong> Debe aplicarse siempre sobre la piel ligeramente húmeda; de lo contrario, al buscar humedad, la extraerá de las capas profundas de tu propia piel, causando el efecto contrario (deshidratación).</p>
+            </div>
+            <div class="card">
+                <h3>Niacinamida (Vitamina B3)</h3>
+                <p>El ingrediente multipropósito respaldado por la ciencia. Sus estudios clínicos demuestran eficacia para regular la producción de sebo, fortalecer la barrera cutánea y atenuar la hiperpigmentación (manchas). <strong>El error del hype:</strong> El marketing promueve concentraciones del 10% o 15%, pero la literatura científica indica que su punto óptimo de eficacia sin irritación está entre el 2% y el 5%.</p>
+            </div>
+            <div class="card">
+                <h3>Retinoides (Vitamina A)</h3>
+                <p>Es el estándar de oro en el antienvejecimiento preventivo. Funciona acelerando la renovación celular y estimulando la producción de colágeno. <strong>La regla de oro:</strong> Causa fotosensibilidad y puede ser irritante al inicio. Teóricamente, debe introducirse en la rutina de forma paulatina (método "retinización"), usarse estrictamente de noche y obligar al uso de protector solar al día siguiente.</p>
             </div>
         </div>
-    </section>
 
-    <footer class="bg-gray-900 text-gray-400 py-12 px-6">        
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">            
-            <div class="mb-4 md:mb-0">
-                <div class="text-2xl font-bold brand-font text-white mb-4">Plantafina.</div>
-                <div class="text-sm space-y-1">
-                    <p class="font-bold text-gray-300">NOAR MAELIS GUAL ZIER</p>
-                    <p>stasvolchok@gmail.com</p>
-                    <p>Dg. 49 Sur #53B - 58, Bogotá, 110611, Colombia</p>
-                </div>
-            </div>            
-            <div class="flex flex-col sm:flex-row sm:space-x-6 space-y-3 sm:space-y-0 text-sm">                
-                <a href="#contacto" class="hover:text-white transition">Contacto</a>                
-                <a href="#" class="hover:text-white transition">Términos y Condiciones</a>
-                <a href="#" class="hover:text-white transition">Política de Privacidad</a>            
-            </div>            
-            <div class="flex space-x-4">                
-                <div class="w-5 h-5 bg-gray-600 rounded-full hover:bg-white cursor-pointer transition"></div>                
-                <div class="w-5 h-5 bg-gray-600 rounded-full hover:bg-white cursor-pointer transition"></div>                
-                <div class="w-5 h-5 bg-gray-600 rounded-full hover:bg-white cursor-pointer transition"></div>            
-            </div>        
-        </div>        
-        <div class="text-center text-xs mt-8 border-t border-gray-800 pt-8">            
-            &copy; 2026 Plantafina. Todos los derechos reservados.        
-        </div>    
+        <h2 id="tutoriales" class="section-title">Metodología: El Orden Correcto de la Rutina</h2>
+        <div class="info-panel">
+            <h3>La Regla de la Textura y el pH</h3>
+            <p>Comprar los mejores ingredientes no sirve de nada si se aplican en el orden incorrecto, ya que se bloquea su absorción. La teoría cosmetológica dicta una regla básica: <strong>aplicar de la textura más ligera a la más densa</strong>.</p>
+            <ul style="margin-top: 15px; padding-left: 20px;">
+                <li style="margin-bottom: 10px;"><strong>Paso 1: Limpieza (Base):</strong> Retirar el sebo y la contaminación. En la noche, la ciencia apoya la "doble limpieza" (un limpiador base aceite seguido de uno base agua) para disolver los protectores solares modernos.</li>
+                <li style="margin-bottom: 10px;"><strong>Paso 2: Tónicos o Esencias (Acuosos):</strong> Productos líquidos que devuelven el pH natural a la piel después del lavado.</li>
+                <li style="margin-bottom: 10px;"><strong>Paso 3: Sueros / Serums (Tratamiento):</strong> Aquí van los activos puros (Vitamina C, Ácido Hialurónico). Son moléculas pequeñas diseñadas para penetrar profundamente.</li>
+                <li style="margin-bottom: 10px;"><strong>Paso 4: Crema Hidratante (Oclusiva):</strong> Su función estructural es crear una barrera física que "sella" los sueros aplicados anteriormente, evitando que el agua se evapore al ambiente (pérdida transepidérmica de agua).</li>
+                <li style="margin-bottom: 10px;"><strong>Paso 5: Fotoprotección (Solo de día):</strong> El escudo final. El protector solar jamás debe mezclarse con la crema hidratante antes de aplicarse, ya que altera su formulación química y reduce su factor de protección (SPF).</li>
+            </ul>
+        </div>
+
+        <h2 id="mitos" class="section-title">Hype Comercial vs. Realidad Científica</h2>
+        <p style="text-align: center; margin-bottom: 30px; color: var(--text);">Desmitificamos las tendencias virales de internet analizando su viabilidad real.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>El "Hype" (Tendencia Viral)</th>
+                    <th>La Realidad Educativa y Científica</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>"Los productos 'Naturales' o 'Limpios' son siempre mejores y más seguros para la piel."</strong></td>
+                    <td>Falso. Lo natural no equivale a seguro (la hiedra venenosa es natural). Muchos aceites esenciales y extractos botánicos son altamente alergénicos y volátiles. La química cosmética sintética suele ser más estable, predecible e hipoalergénica.</td>
+                </tr>
+                <tr>
+                    <td><strong>"Los poros se pueden abrir con calor y cerrar con agua fría."</strong></td>
+                    <td>Falso anatómico. Los poros no tienen músculos a su alrededor; por lo tanto, no se abren ni se cierran. El calor ablanda el sebo en su interior (facilitando la limpieza), y el frío reduce temporalmente la inflamación, pero el tamaño del poro está determinado genéticamente.</td>
+                </tr>
+                <tr>
+                    <td><strong>"Masajear el rostro con rodillos de Jade afina el rostro y elimina toxinas."</strong></td>
+                    <td>Exageración comercial. El masaje frío puede promover el drenaje linfático temporal reduciendo la hinchazón matutina (edema), pero ningún rodillo tiene la capacidad física de alterar la estructura ósea, eliminar grasa facial o desintoxicar el cuerpo (función exclusiva del hígado y los riñones).</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <footer id="legal">
+        <div class="footer-grid">
+            <div class="footer-links">
+                <h4>Marco Legal Documental</h4>
+                <a href="politica-de-privacidad.php">Política de Privacidad</a>
+                <a href="terminos-y-condiciones.php">Términos y Condiciones</a>
+                <a href="#sobre-mi">Acerca del Proyecto Educativo</a>
+            </div>
+
+            <div>
+                <h4>Información de la Autora</h4>
+                <p style="color: #cbd5e1; line-height: 1.6;">
+                Sitio web administrado y redactado por:<br>
+                <strong style="color: white;"><?= htmlspecialchars($nombre_anunciante) ?></strong><br>
+                <em>Plataforma académica de belleza y análisis de ingredientes.</em>
+                </p>
+            </div>
+
+            <div>
+                <h4>Datos de Contacto Oficial</h4>
+                <p style="color: #cbd5e1; line-height: 1.6;">
+                    <strong>Responsable:</strong> <?= htmlspecialchars($nombre_anunciante) ?><br>
+                    <strong>Email:</strong> <a href="mailto:<?= htmlspecialchars($correo_contacto) ?>" style="color: #cbd5e1; text-decoration: none;"><?= htmlspecialchars($correo_contacto) ?></a><br>
+                    <strong>Teléfono:</strong> <?= htmlspecialchars($celular_contacto) ?><br>
+                    <strong>Sede:</strong> <?= htmlspecialchars($direccion_contacto) ?>
+                </p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; <?= $anio_actual ?> Editado y operado exclusivamente por <?= htmlspecialchars($nombre_anunciante) ?>. Todos los derechos reservados.
+        </div>
     </footer>
+
 </body>
 </html>
