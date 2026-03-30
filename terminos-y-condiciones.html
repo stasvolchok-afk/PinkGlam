@@ -1,0 +1,69 @@
+<?php
+// Variables de configuración corporativa y legal
+$nombre_anunciante = "NOAR MAELIS GUAL ZIER";
+$correo_contacto = "stasvolchok@gmail.com";
+$celular_contacto = "+57 3165652252";
+$direccion_contacto = "Dg. 49 Sur #53B - 58, BOGOTA, Colombia";
+$anio_actual = date("Y");
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Términos y Condiciones - <?= htmlspecialchars($nombre_anunciante) ?></title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #4a4a4a; --dark: #2d3748; --text: #334155; --secondary: #d4a373;}
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); margin: 0; background-color: #faf5f0; }
+        header { background-color: #ffffff; padding: 20px 5%; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo { font-size: 16px; font-weight: 700; color: var(--primary); text-decoration: none; text-transform: uppercase; }
+        .container { max-width: 900px; margin: 60px auto; padding: 50px; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        h1, h2 { color: var(--dark); }
+        h1 { border-bottom: 3px solid var(--secondary); padding-bottom: 15px; margin-bottom: 35px; font-size: 32px; }
+        h2 { margin-top: 40px; font-size: 22px; }
+        p { font-size: 16px; color: #4b5563; margin-bottom: 20px; }
+        .highlight { background: #f5ebe0; padding: 15px; border-left: 4px solid var(--secondary); border-radius: 4px; font-weight: 600; color: var(--dark); }
+        footer { text-align: center; padding: 40px 20px; background: var(--dark); color: #cbd5e1; margin-top: 60px; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.php" class="logo">← Volver a la Guía Educativa</a>
+    </header>
+
+    <div class="container">
+        <h1>Términos y Condiciones de Uso</h1>
+        <p><strong>Última actualización:</strong> Marzo de <?= $anio_actual ?></p>
+
+        <h2>1. Aceptación Universal de los Términos</h2>
+        <p>El simple acceso, lectura y consulta de los artículos formativos, tutoriales y análisis de ingredientes en este sitio web, estructurado y dirigido de forma completamente independiente por <strong><?= htmlspecialchars($nombre_anunciante) ?></strong>, constituye la aceptación expresa y sin reservas de los presentes Términos y Condiciones por parte del visitante.</p>
+
+        <h2>2. Ausencia Absoluta de Servicios Médicos y Comerciales</h2>
+        <p class="highlight">Se certifica y advierte de manera oficial que el presente entorno digital es una iniciativa educativa personal, carente en su totalidad de vinculación comercial con laboratorios dermatológicos, farmacias, tiendas de maquillaje o spas de estética.</p>
+        <p>La información teórica sobre formulaciones cosméticas y rutinas de cuidado publicada aquí tiene un carácter <strong>exclusivamente pedagógico y orientativo</strong>. En este portal no se realizan transacciones económicas, no se venden cremas ni tratamientos, no se ofrecen enlaces de afiliados para compra de productos y no se prestan servicios de consultas dermatológicas tarifadas.</p>
+
+        <h2>3. Carácter Puramente Educacional y Exoneración de Salud</h2>
+        <p>Este proyecto persigue un objetivo netamente cívico y académico: educar a los usuarios para que comprendan las etiquetas de sus productos. Bajo ningún pretexto, la lectura de esta información reemplaza el diagnóstico, consejo, receta o tratamiento médico proporcionado por un dermatólogo colegiado. Cada tipo de piel es única y puede reaccionar distinto a ciertos ingredientes.</p>
+
+        <h2>4. Exoneración de Responsabilidades Físicas</h2>
+        <p>La titularidad de este dominio no asume responsabilidad civil, médica o administrativa por reacciones alérgicas, brotes de acné, dermatitis de contacto, manchas o cualquier afección cutánea que un visitante pueda sufrir al intentar aplicar rutinas, productos o metodologías basándose en la lectura e interpretación libre de este blog. Las decisiones sobre salud cutánea y la inclusión de activos puros (como el retinol) deben ser validadas siempre por un profesional médico.</p>
+
+        <h2>5. Respeto al Derecho de Autor y Propiedad Intelectual</h2>
+        <p>La redacción de los artículos formativos, los resúmenes teóricos y las desmitificaciones cosméticas son propiedad intelectual inalienable de la autora del blog. Se permite la cita de fragmentos para trabajos de investigación, proyectos universitarios o referencias bibliográficas, siempre que se referencie la fuente original de manera clara (mediante enlace web). Queda estrictamente prohibida su copia masiva, plagio o distribución para promocionar productos comerciales de terceros.</p>
+
+        <h2>6. Vías Formales de Notificación</h2>
+        <p>Para notificaciones formales sobre el cumplimiento de estas políticas, rectificaciones académicas o requerimientos documentales, la administración atiende a través de:</p>
+        <ul>
+            <li><strong>Despacho electrónico:</strong> <?= htmlspecialchars($correo_contacto) ?></li>
+            <li><strong>Sede Física de Contacto:</strong> <?= htmlspecialchars($direccion_contacto) ?></li>
+        </ul>
+    </div>
+
+    <footer>
+        &copy; <?= $anio_actual ?> Portal educativo redactado por <?= htmlspecialchars($nombre_anunciante) ?>. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
