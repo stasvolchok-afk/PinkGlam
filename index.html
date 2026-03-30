@@ -1,65 +1,96 @@
-<?php
-// Variables de configuración corporativa y legal
-$nombre_anunciante = "NOAR MAELIS GUAL ZIER";
-$correo_contacto = "stasvolchok@gmail.com";
-$celular_contacto = "+57 3165652252";
-$direccion_contacto = "Dg. 49 Sur #53B - 58, BOGOTA, Colombia";
-$anio_actual = date("Y");
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= htmlspecialchars($nombre_anunciante) ?> | Guía de Belleza Inteligente</title>
+    <title>NOAR MAELIS GUAL ZIER | Guía de Belleza Inteligente</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #4a4a4a; /* Gris Carbón / Ciencia */
-            --secondary: #d4a373; /* Nude / Piel */
+            --primary: #4a4a4a;
+            /* Gris Carbón / Ciencia */
+            --secondary: #d4a373;
+            /* Nude / Piel */
             --dark: #2d3748;
-            --light: #faf5f0; /* Fondo crema muy suave */
+            --light: #faf5f0;
+            /* Fondo crema muy suave */
             --text: #334155;
             --accent: #b08968; 
         }
-        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text); margin: 0; background-color: #ffffff; }
-        header { background-color: #ffffff; padding: 20px 5%; box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; flex-wrap: wrap; }
-        .logo { font-size: 16px; font-weight: 700; color: var(--primary); text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px; }
-        nav { margin-top: 10px; }
-        nav a { margin-left: 20px; text-decoration: none; color: var(--dark); font-weight: 600; font-size: 14px; transition: color 0.3s; }
-        nav a:hover { color: var(--secondary); }
-        .hero { background: linear-gradient(135deg, #f5ebe0 0%, #e3d5ca 100%); padding: 80px 5%; text-align: center; border-bottom: 1px solid #d5bdaf; }
-        .hero h1 { color: var(--dark); font-size: 42px; margin-bottom: 20px; font-weight: 700; }
-        .hero p { font-size: 18px; max-width: 800px; margin: 0 auto 30px; color: #4a4a4a; }
-        .badge { background-color: var(--primary); color: white; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; display: inline-block; margin-bottom: 20px; }
-        .container { max-width: 1200px; margin: 60px auto; padding: 0 5%; }
-        .section-title { font-size: 32px; color: var(--dark); text-align: center; margin-bottom: 50px; position: relative; }
-        .section-title::after { content: ''; width: 60px; height: 4px; background-color: var(--accent); display: block; margin: 15px auto 0; border-radius: 2px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px; }
-        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 5px solid var(--secondary); transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { color: var(--dark); margin-top: 0; font-size: 20px; }
-        .info-panel { background-color: var(--light); border-radius: 12px; padding: 40px; margin-bottom: 60px; border-left: 6px solid var(--secondary); }
-        .info-panel h3 { color: var(--dark); margin-top: 0; }
-        .about-section { background: #ffffff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 60px; border: 1px solid #e3d5ca; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text);
+margin: 0; background-color: #ffffff; }
+        header { background-color: #ffffff; padding: 20px 5%;
+box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; flex-wrap: wrap;
+}
+        .logo { font-size: 16px; font-weight: 700; color: var(--primary); text-decoration: none; text-transform: uppercase;
+letter-spacing: 0.5px; }
+        nav { margin-top: 10px;
+}
+        nav a { margin-left: 20px; text-decoration: none; color: var(--dark); font-weight: 600;
+font-size: 14px; transition: color 0.3s; }
+        nav a:hover { color: var(--secondary);
+}
+        .hero { background: linear-gradient(135deg, #f5ebe0 0%, #e3d5ca 100%); padding: 80px 5%;
+text-align: center; border-bottom: 1px solid #d5bdaf; }
+        .hero h1 { color: var(--dark);
+font-size: 42px; margin-bottom: 20px; font-weight: 700; }
+        .hero p { font-size: 18px;
+max-width: 800px; margin: 0 auto 30px; color: #4a4a4a; }
+        .badge { background-color: var(--primary);
+color: white; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; display: inline-block; margin-bottom: 20px;
+}
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 5%;
+}
+        .section-title { font-size: 32px; color: var(--dark); text-align: center; margin-bottom: 50px; position: relative;
+}
+        .section-title::after { content: ''; width: 60px; height: 4px; background-color: var(--accent); display: block;
+margin: 15px auto 0; border-radius: 2px; }
+        .grid { display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 60px; }
+        .card { background: white;
+padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-top: 5px solid var(--secondary); transition: transform 0.3s;
+}
+        .card:hover { transform: translateY(-5px);
+}
+        .card h3 { color: var(--dark); margin-top: 0; font-size: 20px;
+}
+        .info-panel { background-color: var(--light); border-radius: 12px; padding: 40px; margin-bottom: 60px;
+border-left: 6px solid var(--secondary); }
+        .info-panel h3 { color: var(--dark); margin-top: 0;
+}
+        .about-section { background: #ffffff; padding: 40px; border-radius: 12px;
+box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 60px; border: 1px solid #e3d5ca;
+}
         
-        table { width: 100%; border-collapse: collapse; margin-bottom: 40px; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden; }
-        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #e3d5ca; }
-        th { background-color: var(--primary); color: white; font-weight: 600; }
-        tr:hover { background-color: #faf5f0; }
+        table { width: 100%;
+border-collapse: collapse; margin-bottom: 40px; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px; overflow: hidden;
+}
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #e3d5ca;
+}
+        th { background-color: var(--primary); color: white; font-weight: 600;
+}
+        tr:hover { background-color: #faf5f0;
+}
         
-        footer { background-color: var(--dark); color: #cbd5e1; padding: 60px 5% 20px; font-size: 14px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; border-bottom: 1px solid #334155; padding-bottom: 40px; }
-        .footer-grid h4 { color: white; margin-top: 0; font-size: 18px; }
-        .footer-links a { color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 12px; transition: color 0.3s;}
-        .footer-links a:hover { color: white; }
-        .copyright { text-align: center; margin-top: 20px; }
+        footer { background-color: var(--dark);
+color: #cbd5e1; padding: 60px 5% 20px; font-size: 14px; }
+        .footer-grid { display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; border-bottom: 1px solid #334155; padding-bottom: 40px;
+}
+        .footer-grid h4 { color: white; margin-top: 0; font-size: 18px;
+}
+        .footer-links a { color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 12px;
+transition: color 0.3s;}
+        .footer-links a:hover { color: white;
+}
+        .copyright { text-align: center; margin-top: 20px;
+}
     </style>
 </head>
 <body>
 
     <header>
-        <a href="index.php" class="logo"><?= htmlspecialchars($nombre_anunciante) ?></a>
+        <a href="index.html" class="logo">NOAR MAELIS GUAL ZIER</a>
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#ingredientes">Ciencia de Ingredientes</a>
@@ -72,43 +103,60 @@ $anio_actual = date("Y");
     <section id="inicio" class="hero">
         <span class="badge">Blog Educativo de Cosmetología - Sin Fines Comerciales</span>
         <h1>Belleza Inteligente para la Mujer Real</h1>
-        <p>Dejamos de lado el hype del marketing para enfocarnos estrictamente en lo que funciona. Análisis de ingredientes basados en evidencia, tutoriales de aplicación y la desmitificación de las últimas tendencias del cuidado de la piel.</p>
+        <p>Dejamos de lado el hype del marketing para enfocarnos estrictamente en lo que funciona.
+Análisis de ingredientes basados en evidencia, tutoriales de aplicación y la desmitificación de las últimas tendencias del cuidado de la piel.</p>
     </section>
 
     <div class="container">
         
         <div id="sobre-mi" class="about-section">
             <h2>Propósito Académico y Formativo del Sitio</h2>
-            <p>Este portal es una iniciativa estrictamente educativa, académica e informativa operada de manera personal e independiente por <strong><?= htmlspecialchars($nombre_anunciante) ?></strong>. Mi propósito exclusivo es la divulgación de conocimientos teóricos sobre el cuidado personal, la higiene y la química cosmética básica.</p>
-            <p><strong>Declaro de manera oficial y transparente que este sitio NO tiene fines comerciales. NO opero una clínica estética, NO soy dermatóloga, NO vendo cremas, sueros ni maquillaje, y NO ofrezco consultas médicas ni recetas.</strong> Toda la información analítica sobre ingredientes se proporciona de forma libre, gratuita y orientativa como material de estudio.</p>
+            <p>Este portal es una iniciativa estrictamente educativa, académica e informativa operada de manera personal e independiente por <strong>NOAR MAELIS GUAL ZIER</strong>.
+Mi propósito exclusivo es la divulgación de conocimientos teóricos sobre el cuidado personal, la higiene y la química cosmética básica.</p>
+            <p><strong>Declaro de manera oficial y transparente que este sitio NO tiene fines comerciales.
+NO opero una clínica estética, NO soy dermatóloga, NO vendo cremas, sueros ni maquillaje, y NO ofrezco consultas médicas ni recetas.</strong> Toda la información analítica sobre ingredientes se proporciona de forma libre, gratuita y orientativa como material de estudio.</p>
         </div>
 
         <h2 id="ingredientes" class="section-title">Análisis Teórico de Ingredientes Activos</h2>
         <div class="grid">
             <div class="card">
-                <h3>Ácido Hialurónico (AH)</h3>
-                <p>Químicamente, es un glicosaminoglicano. Su función principal no es "hidratar" por sí solo, sino actuar como una esponja molecular: puede retener hasta 1000 veces su peso en agua. <strong>El secreto analítico:</strong> Debe aplicarse siempre sobre la piel ligeramente húmeda; de lo contrario, al buscar humedad, la extraerá de las capas profundas de tu propia piel, causando el efecto contrario (deshidratación).</p>
+                <h3>Ácido Hialurónico 
+(AH)</h3>
+                <p>Químicamente, es un glicosaminoglicano.
+Su función principal no es "hidratar" por sí solo, sino actuar como una esponja molecular: puede retener hasta 1000 veces su peso en agua.
+<strong>El secreto analítico:</strong> Debe aplicarse siempre sobre la piel ligeramente húmeda;
+de lo contrario, al buscar humedad, la extraerá de las capas profundas de tu propia piel, causando el efecto contrario (deshidratación).</p>
             </div>
             <div class="card">
                 <h3>Niacinamida (Vitamina B3)</h3>
-                <p>El ingrediente multipropósito respaldado por la ciencia. Sus estudios clínicos demuestran eficacia para regular la producción de sebo, fortalecer la barrera cutánea y atenuar la hiperpigmentación (manchas). <strong>El error del hype:</strong> El marketing promueve concentraciones del 10% o 15%, pero la literatura científica indica que su punto óptimo de eficacia sin irritación está entre el 2% y el 5%.</p>
+                <p>El ingrediente multipropósito respaldado por la ciencia.
+Sus estudios clínicos demuestran eficacia para regular la producción de sebo, fortalecer la barrera cutánea y atenuar la hiperpigmentación (manchas).
+<strong>El error del hype:</strong> El marketing promueve concentraciones del 10% o 15%, pero la literatura científica indica que su punto óptimo de eficacia sin irritación está entre el 2% y el 5%.</p>
             </div>
             <div class="card">
                 <h3>Retinoides (Vitamina A)</h3>
-                <p>Es el estándar de oro en el antienvejecimiento preventivo. Funciona acelerando la renovación celular y estimulando la producción de colágeno. <strong>La regla de oro:</strong> Causa fotosensibilidad y puede ser irritante al inicio. Teóricamente, debe introducirse en la rutina de forma paulatina (método "retinización"), usarse estrictamente de noche y obligar al uso de protector solar al día siguiente.</p>
+                <p>Es el estándar de oro en el antienvejecimiento preventivo.
+Funciona acelerando la renovación celular y estimulando la producción de colágeno.
+<strong>La regla de oro:</strong> Causa fotosensibilidad y puede ser irritante al inicio.
+Teóricamente, debe introducirse en la rutina de forma paulatina (método "retinización"), usarse estrictamente de noche y obligar al uso de protector solar al día siguiente.</p>
             </div>
         </div>
 
         <h2 id="tutoriales" class="section-title">Metodología: El Orden Correcto de la Rutina</h2>
         <div class="info-panel">
             <h3>La Regla de la Textura y el pH</h3>
-            <p>Comprar los mejores ingredientes no sirve de nada si se aplican en el orden incorrecto, ya que se bloquea su absorción. La teoría cosmetológica dicta una regla básica: <strong>aplicar de la textura más ligera a la más densa</strong>.</p>
+            
+<p>Comprar los mejores ingredientes no sirve de nada si se aplican en el orden incorrecto, ya que se bloquea su absorción.
+La teoría cosmetológica dicta una regla básica: <strong>aplicar de la textura más ligera a la más densa</strong>.</p>
             <ul style="margin-top: 15px; padding-left: 20px;">
-                <li style="margin-bottom: 10px;"><strong>Paso 1: Limpieza (Base):</strong> Retirar el sebo y la contaminación. En la noche, la ciencia apoya la "doble limpieza" (un limpiador base aceite seguido de uno base agua) para disolver los protectores solares modernos.</li>
+                <li style="margin-bottom: 10px;"><strong>Paso 1: Limpieza (Base):</strong> Retirar el sebo y la contaminación.
+En la noche, la ciencia apoya la "doble limpieza" (un limpiador base aceite seguido de uno base agua) para disolver los protectores solares modernos.</li>
                 <li style="margin-bottom: 10px;"><strong>Paso 2: Tónicos o Esencias (Acuosos):</strong> Productos líquidos que devuelven el pH natural a la piel después del lavado.</li>
-                <li style="margin-bottom: 10px;"><strong>Paso 3: Sueros / Serums (Tratamiento):</strong> Aquí van los activos puros (Vitamina C, Ácido Hialurónico). Son moléculas pequeñas diseñadas para penetrar profundamente.</li>
+                <li style="margin-bottom: 10px;"><strong>Paso 3: Sueros / Serums (Tratamiento):</strong> Aquí van los activos puros (Vitamina C, Ácido Hialurónico).
+Son moléculas pequeñas diseñadas para penetrar profundamente.</li>
                 <li style="margin-bottom: 10px;"><strong>Paso 4: Crema Hidratante (Oclusiva):</strong> Su función estructural es crear una barrera física que "sella" los sueros aplicados anteriormente, evitando que el agua se evapore al ambiente (pérdida transepidérmica de agua).</li>
-                <li style="margin-bottom: 10px;"><strong>Paso 5: Fotoprotección (Solo de día):</strong> El escudo final. El protector solar jamás debe mezclarse con la crema hidratante antes de aplicarse, ya que altera su formulación química y reduce su factor de protección (SPF).</li>
+                <li style="margin-bottom: 10px;"><strong>Paso 5: Fotoprotección (Solo de día):</strong> El escudo final.
+El protector solar jamás debe mezclarse con la crema hidratante antes de aplicarse, ya que altera su formulación química y reduce su factor de protección (SPF).</li>
             </ul>
         </div>
 
@@ -116,24 +164,33 @@ $anio_actual = date("Y");
         <p style="text-align: center; margin-bottom: 30px; color: var(--text);">Desmitificamos las tendencias virales de internet analizando su viabilidad real.</p>
         
         <table>
-            <thead>
+  
+          <thead>
                 <tr>
                     <th>El "Hype" (Tendencia Viral)</th>
                     <th>La Realidad Educativa y Científica</th>
                 </tr>
-            </thead>
+           
+ </thead>
             <tbody>
                 <tr>
                     <td><strong>"Los productos 'Naturales' o 'Limpios' son siempre mejores y más seguros para la piel."</strong></td>
-                    <td>Falso. Lo natural no equivale a seguro (la hiedra venenosa es natural). Muchos aceites esenciales y extractos botánicos son altamente alergénicos y volátiles. La química cosmética sintética suele ser más estable, predecible e hipoalergénica.</td>
+                    <td>Falso.
+Lo natural no equivale a seguro (la hiedra venenosa es natural).
+Muchos aceites esenciales y extractos botánicos son altamente alergénicos y volátiles.
+La química cosmética sintética suele ser más estable, predecible e hipoalergénica.</td>
                 </tr>
                 <tr>
                     <td><strong>"Los poros se pueden abrir con calor y cerrar con agua fría."</strong></td>
-                    <td>Falso anatómico. Los poros no tienen músculos a su alrededor; por lo tanto, no se abren ni se cierran. El calor ablanda el sebo en su interior (facilitando la limpieza), y el frío reduce temporalmente la inflamación, pero el tamaño del poro está determinado genéticamente.</td>
+                    <td>Falso anatómico.
+Los poros no tienen músculos a su alrededor; por lo tanto, no se abren ni se cierran.
+El calor ablanda el sebo en su interior (facilitando la limpieza), y el frío reduce temporalmente la inflamación, pero el tamaño del poro está determinado genéticamente.</td>
                 </tr>
                 <tr>
                     <td><strong>"Masajear el rostro con rodillos de Jade afina el rostro y elimina toxinas."</strong></td>
-                    <td>Exageración comercial. El masaje frío puede promover el drenaje linfático temporal reduciendo la hinchazón matutina (edema), pero ningún rodillo tiene la capacidad física de alterar la estructura ósea, eliminar grasa facial o desintoxicar el cuerpo (función exclusiva del hígado y los riñones).</td>
+           
+                 <td>Exageración comercial.
+El masaje frío puede promover el drenaje linfático temporal reduciendo la hinchazón matutina (edema), pero ningún rodillo tiene la capacidad física de alterar la estructura ósea, eliminar grasa facial o desintoxicar el cuerpo (función exclusiva del hígado y los riñones).</td>
                 </tr>
             </tbody>
         </table>
@@ -142,35 +199,41 @@ $anio_actual = date("Y");
 
     <footer id="legal">
         <div class="footer-grid">
-            <div class="footer-links">
+       
+             <div class="footer-links">
                 <h4>Marco Legal Documental</h4>
-                <a href="politica-de-privacidad.php">Política de Privacidad</a>
-                <a href="terminos-y-condiciones.php">Términos y Condiciones</a>
+                <a href="politica-de-privacidad.html">Política de Privacidad</a>
+                <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
                 <a href="#sobre-mi">Acerca del Proyecto Educativo</a>
             </div>
 
-            <div>
+      
+       <div>
                 <h4>Información de la Autora</h4>
                 <p style="color: #cbd5e1; line-height: 1.6;">
                 Sitio web administrado y redactado por:<br>
-                <strong style="color: white;"><?= htmlspecialchars($nombre_anunciante) ?></strong><br>
-                <em>Plataforma académica de belleza y análisis de ingredientes.</em>
+                <strong style="color: white;">NOAR MAELIS GUAL ZIER</strong><br>
+              
+  <em>Plataforma académica de belleza y análisis de ingredientes.</em>
                 </p>
             </div>
 
             <div>
                 <h4>Datos de Contacto Oficial</h4>
-                <p style="color: #cbd5e1; line-height: 1.6;">
-                    <strong>Responsable:</strong> <?= htmlspecialchars($nombre_anunciante) ?><br>
-                    <strong>Email:</strong> <a href="mailto:<?= htmlspecialchars($correo_contacto) ?>" style="color: #cbd5e1; text-decoration: none;"><?= htmlspecialchars($correo_contacto) ?></a><br>
-                    <strong>Teléfono:</strong> <?= htmlspecialchars($celular_contacto) ?><br>
-                    <strong>Sede:</strong> <?= htmlspecialchars($direccion_contacto) ?>
+                <p style="color: #cbd5e1;
+line-height: 1.6;">
+                    <strong>Responsable:</strong> NOAR MAELIS GUAL ZIER<br>
+                    <strong>Email:</strong> <a href="mailto:stasvolchok@gmail.com" style="color: #cbd5e1;
+text-decoration: none;">stasvolchok@gmail.com</a><br>
+                    <strong>Teléfono:</strong> +57 3165652252<br>
+                    <strong>Sede:</strong> Dg. 49 Sur #53B - 58, BOGOTA, Colombia
                 </p>
             </div>
         </div>
         
-        <div class="copyright">
-            &copy; <?= $anio_actual ?> Editado y operado exclusivamente por <?= htmlspecialchars($nombre_anunciante) ?>. Todos los derechos reservados.
+       
+ <div class="copyright">
+            &copy; 2026 Editado y operado exclusivamente por NOAR MAELIS GUAL ZIER. Todos los derechos reservados.
         </div>
     </footer>
 
